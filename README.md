@@ -70,6 +70,12 @@
     - `dashboard_guide.md`: 各ダッシュボードの設定方法や使用方法の説明
     - `project_overview.md`: プロジェクト全体の概要
 
+## 作成者
+
+- **Ryo Tanohata**  
+  - GitHub: [Ry02024](https://github.com/Ry02024)
+  - Email: [tan0ry02024@gmail.com](mail:tan0ry02024@gmail.com)
+ 
 ## 今後の拡張
 
 このプロジェクトは柔軟に拡張可能です。新しいダッシュボードの追加や、データ処理・モデリングの改良が必要な場合は、各モジュールに新しいスクリプトを追加し、`README.md` や `config.yaml` を適宜更新してください。
