@@ -67,7 +67,7 @@
 
 このプロジェクトのデータ可視化は、Google Looker Studioを使用して行っています。リアルタイムでの売上データや広告効果を視覚的に確認できるようになっています。
 
-[可視化ダッシュボードを見る](https://lookerstudio.google.com/reporting/1d10df6c-9c4b-44e3-a7c2-0ac514a10c0f)
+[可視化ダッシュボードを見る（dashboard_links.mdへのリンク）](./results/visualizations/dashboard_links.md)
 
 ダッシュボードには以下の指標が含まれています：
 - リアルタイムの売上データ（個数・金額）
