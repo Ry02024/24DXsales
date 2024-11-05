@@ -2,12 +2,12 @@ import pandas as pd
 import lightgbm as lgb
 from lightgbm import log_evaluation, early_stopping
 
-def set_data_set(train_df, valid_df):
+def set_data_set(train_df, validation_df):
     # xとyに分割
     train_x_df = train_df.drop(['product_num_11', 'product_num_12', 'product_price_11', 'product_price_12'], axis=1).copy()
     train_y_df = pd.DataFrame(train_df['product_num_12'])
-    validation_x_df = valid_df.drop(['product_num_11', 'product_num_12', 'product_price_11', 'product_price_12'], axis=1).copy()
-    validation_y_df = pd.DataFrame(valid_df['product_num_12'])
+    validation_x_df = validation_df.drop(['product_num_11', 'product_num_12', 'product_price_11', 'product_price_12'], axis=1).copy()
+    validation_y_df = pd.DataFrame(validation_df['product_num_12'])
 
     # LightGBM用のデータセットに変換
     lgb_train = lgb.Dataset(train_x_df, train_y_df)
