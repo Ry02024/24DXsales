@@ -15,7 +15,7 @@ def set_data_set(train_df, validation_df):
 
     return lgb_train, lgb_eval
 
-def train_by_lightgbm(lgb_train, lgb_eval):
+def train_by_lightgbm(lgb_train, lgb_eval, round=1000):
     # ハイパーパラメータを設定
     params = {'metric': 'rmse',
             }
@@ -28,7 +28,7 @@ def train_by_lightgbm(lgb_train, lgb_eval):
     gbm = lgb.train(params,
                     lgb_train,
                     valid_sets=[lgb_train,lgb_eval],
-                    num_boost_round=1000,
+                    num_boost_round=round,
                     callbacks = callbacks,
             )
     # モデルをファイルに保存
