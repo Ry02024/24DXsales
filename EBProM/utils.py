@@ -501,7 +501,7 @@ def create_sales_uptrend_flag(train_df, test_df, flag_num=15, test_product_ids=[
     for pid in test_product_ids:
         display_df = test_df_updated.loc[test_df_updated['product_id'] == pid, ['product_id', 'product_num_10', 'up_num_flag']]
         print(f"product_id == {pid} のデータ:")
-        print(display_df)
+        # print(display_df)
 
     return train_df_up, test_df_updated
 
