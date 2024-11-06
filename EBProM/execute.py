@@ -1,3 +1,11 @@
+import os
+import pandas as pd
+from lightgbm import Booster
+import tempfile
+import streamlit as st
+from .utils import *  # 相対インポートで utils をインポート
+from .machine_learning import *
+
 # 前処理と特徴量生成を実行するメイン処理関数
 def execute_preprocessing(sales_df, item_df, category_df, test_df, save_dir):
     try:
