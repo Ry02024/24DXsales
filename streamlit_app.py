@@ -1,6 +1,9 @@
+import sys
+import os
 import streamlit as st
 import pandas as pd
-from DXsales.EBProM.execute import execute_preprocessing, execute_training, execute_prediction
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from EBProM.execute import execute_preprocessing, execute_training, execute_prediction
 
 # ファイルアップロード後にメッセージを表示しながら処理
 def load_data(uploaded_file, description):
