@@ -61,13 +61,13 @@ def execute_preprocessing(sales_df, item_df, category_df, test_df, save_dir):
 
 # モデルのトレーニングを実行する関数
 def execute_training(train_df, valid_df, model_save_dir):
-    st.write("データセットをセットアップしています...")
-    lgb_train, lgb_eval = set_data_set(train_df, valid_df)
-    st.success("データセットのセットアップが完了しました。")
+    with st.spinner("データセットをセットアップしています..."):
+        lgb_train, lgb_eval = set_data_set(train_df, valid_df)
+        st.success("データセットのセットアップが完了しました。")
 
-    st.write("LightGBMでモデルをトレーニング中...")
-    gbm = train_by_lightgbm(lgb_train, lgb_eval)
-    st.success("モデルのトレーニングが完了しました。")
+    with st.spinner("LightGBMでモデルをトレーニング中..."):
+        gbm = train_by_lightgbm(lgb_train, lgb_eval)
+        st.success("モデルのトレーニングが完了しました。")
 
     # モデルの保存
     if not os.path.exists(model_save_dir):
